@@ -1,4 +1,4 @@
-import scipy.integrate as odeint
+from scipy.integrate import odeint
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -9,7 +9,7 @@ def system(y,t):
     else:
         u=1.0
 
-    dydt=(- y + u)/5
+    dydt=(- y + u)/5.0
     return dydt
 
 # set initial value and time, and solve the differential equation
