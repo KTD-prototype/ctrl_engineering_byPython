@@ -22,3 +22,4 @@ for i in range(len(zeta)):
     ax.plot(t, y, **pltargs)
 
 func.plot_set(ax, 't', 'y', 'best')
+plt.show()

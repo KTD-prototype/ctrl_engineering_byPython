@@ -23,7 +23,7 @@ def plot_set(fig_ax, *args):
     fig_ax.grid(ls=':')
     if len(args) == 3:
         fig_ax.legend(loc=args[2])  # set location of legend by 3rd argument
-    plt.show()
+    # plt.show()
 
 
 # function to fix bode diagram

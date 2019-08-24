@@ -22,3 +22,4 @@ for i in range(len(omega_n)):
     ax.plot(t, y, **pltargs)
 
 func.plot_set(ax, 't', 'y', 'best')
+plt.show()

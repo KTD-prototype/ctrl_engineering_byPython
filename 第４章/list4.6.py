@@ -16,7 +16,7 @@ for i in range(len(K)):
     ax.plot(t, y, ls=next(LS), label='K = ' + str(K[i]))
 
 func.plot_set(ax, 't', 'y', 'upper left')
-
+plt.show()
 
 # T, K = 0.5, 1 #set time constant and gain
 # P = tf([0, K], [T, 1]) # 1st order lag system

@@ -15,7 +15,7 @@ for i in range(len(T)):
     ax.plot(t, y, ls=next(LS), label='T = ' + str(T[i]))
 
 func.plot_set(ax, 't', 'y', 'best')
-
+plt.show()
 
 # T, K = 0.5, 1 #set time constant and gain
 # P = tf([0, K], [T, 1]) # 1st order lag system

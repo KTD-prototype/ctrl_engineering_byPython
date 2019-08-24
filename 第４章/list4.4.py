@@ -10,3 +10,4 @@ y, t = step(P, np.arange(0, 5, 0.01))  # step response
 fig, ax = plt.subplots()
 ax.plot(t, y)
 func.plot_set(ax, 't', 'y')
+plt.show()
