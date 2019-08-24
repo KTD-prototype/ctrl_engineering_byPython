@@ -5,7 +5,7 @@ import function as func
 
 fig, ax = plt.subplots()
 
-zeta, omega_n = 0.4, 5 #setting dumping coefficient and singular angular frequency
+zeta, omega_n = 0.4, 5  # setting dumping coefficient and singular angular frequency
 
 # step response of second order lag system
 P = tf([0, omega_n**2], [1, 2 * zeta * omega_n, omega_n**2])

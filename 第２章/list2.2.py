@@ -1,11 +1,11 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-x=np.arange(0,4*np.pi,0.1)
-y=np.sin(x)
+x = np.arange(0, 4 * np.pi, 0.1)
+y = np.sin(x)
 
-fig, ax = plt.subplots() # generate an object of figure and axes
-ax.plot(x,y) # generate a graph in the axes object
+fig, ax = plt.subplots()  # generate an object of figure and axes
+ax.plot(x, y)  # generate a graph in the axes object
 ax.set_xlabel('x')
 ax.set_ylabel('y')
 ax.grid()

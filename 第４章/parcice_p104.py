@@ -6,13 +6,13 @@ import sympy as sp
 
 sp.init_printing()
 s = sp.Symbol('s')
-t = sp.Symbol('t', positive = True)
+t = sp.Symbol('t', positive=True)
 
 # fig1, ax1 = plt.subplots()
 fig2, ax2 = plt.subplots()
 LS = func.linestyle_generator()
 
-P1 = sp.expand(((s + 3) / ((s + 1)*(s + 2))), s)
+P1 = sp.expand(((s + 3) / ((s + 1) * (s + 2))), s)
 P1 = tf([1, 3], [1, 3, 2])
 P2 = tf([0, 1], [1, 2, 2, 1])
 # print(P2)

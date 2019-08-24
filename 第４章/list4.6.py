@@ -13,10 +13,9 @@ T = 0.5
 
 for i in range(len(K)):
     y, t = step(tf([0, K[i]], [T, 1]), np.arange(0, 5, 0.01))
-    ax.plot(t, y, ls = next(LS), label = 'K = ' + str(K[i]))
+    ax.plot(t, y, ls=next(LS), label='K = ' + str(K[i]))
 
 func.plot_set(ax, 't', 'y', 'upper left')
-
 
 
 # T, K = 0.5, 1 #set time constant and gain
