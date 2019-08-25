@@ -18,9 +18,10 @@ observer_poles = [-15 + 5j, -15 - 5j]
 # design for observer gains [correspondents to state feedbacks]
 L = -acker(P.A.T, P.C.T, observer_poles).T
 
-fig, ax = plt.subplots(1, 2)
+fig, ax = plt.subplots(1, 2, figsize=(6, 2.3))
 Td = np.arange(0, 3, 0.01)
 X0 = [-1, 0.5]
+d = 0.5 * (Td > 0)  # step desturbance
 
 # design for state feedback gain to stabilize system P
 regulator_poles = [-5 + 5j, -5 - 5j]
@@ -36,8 +37,8 @@ ax[1].plot(t, x[:, 1], ls='-.', label='${x}_2$')
 # input : u = F * x
 u = [[F[0, 0] * x[i, 0] + F[0, 1] * x[i, 1]] for i in range(len(x))]
 
-# output :y = C * x
-y = x[:, 0]
+# output :y = C * x + d
+y = x[:, 0] + d
 
 # state estimation by observer
 Obs = ss(P.A + L * P.C, np.c_[P.B, -L], np.eye(2), [[0, 0], [0, 0]])
